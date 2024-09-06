@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gray-900 text-white text-center py-16">
+      <section className="bg-gray-700 text-white text-center py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Welcome to Our Website
@@ -53,7 +53,7 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gray-900 text-white text-center py-12">
+      <section className="bg-gray-700 text-white text-center py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Take the Next Step?

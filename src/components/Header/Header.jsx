@@ -19,10 +19,8 @@ const Header = () => {
               to="/"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-blue-600" : "text-white"
-                } ${
-                  isActive ? "underline" : ""
-                } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-700 hover:underline lg:p-0`
+                  isActive ? "text-blue-400 font-bold" : "text-white"
+                }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-400 hover:underline lg:p-0`
               }
             >
               Home
@@ -33,10 +31,8 @@ const Header = () => {
               to="/about"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-blue-600" : "text-white"
-                } ${
-                  isActive ? "underline" : ""
-                } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-700 hover:underline lg:p-0`
+                  isActive ? "text-blue-400 font-bold" : "text-white"
+                } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-400 hover:underline lg:p-0`
               }
             >
               About
@@ -47,10 +43,8 @@ const Header = () => {
               to="/contact"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-blue-600" : "text-white"
-                } ${
-                  isActive ? "underline" : ""
-                } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-700 hover:underline lg:p-0`
+                  isActive ? "text-blue-400 font-bold" : "text-white"
+                } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-400 hover:underline lg:p-0`
               }
             >
               Contact
@@ -61,10 +55,8 @@ const Header = () => {
               to="/projects"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-blue-600" : "text-white"
-                } ${
-                  isActive ? "underline" : ""
-                } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-700 hover:underline lg:p-0`
+                  isActive ? "text-blue-400 font-bold" : "text-white"
+                }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-400 hover:underline lg:p-0`
               }
             >
               Projects
@@ -75,10 +67,8 @@ const Header = () => {
               to="/design"
               className={({ isActive }) =>
                 `block py-2 pr-4 pl-3 duration-200 ${
-                  isActive ? "text-blue-600" : "text-white"
-                } ${
-                  isActive ? "underline" : ""
-                } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-700 hover:underline lg:p-0`
+                  isActive ? "text-blue-400 font-bold" : "text-white"
+                }border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-400 hover:underline lg:p-0`
               }
             >
               Designs
