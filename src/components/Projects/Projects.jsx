@@ -11,7 +11,7 @@ const Projects = () => {
           <h2 className="text-5xl font-bold mb-8 text-center text-gray-900">
             Our Projects
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 place-items-center gap-8">
             {projects.map((proj) => (
               <ProjectCard key={proj.id} project={proj} />
             ))}

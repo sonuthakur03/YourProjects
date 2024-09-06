@@ -14,7 +14,7 @@ const Home = () => {
           <p className="text-lg mb-6">
             Your go-to platform for amazing projects and insights.
           </p>
-          <Link to="/get-started">
+          <Link to="/login">
             <button className="bg-yellow-500 text-gray-800 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-600">
               Get Started
             </button>
@@ -27,25 +27,31 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Our Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Feature One</h3>
-              <p className="text-gray-700">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                vehicula ex eu nulla varius facilisis.
+            <div className="bg-white p-6 rounded-lg shadow-lg w-11/12">
+              <h3 className="text-xl font-semibold mb-4">
+                Get Project Ideas💡
+              </h3>
+              <p className="text-gray-700 ">
+                Here you can have projects idea for your practice projects and
+                also u can include it to your resume for job.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Feature Two</h3>
+            <div className="bg-white p-6 rounded-lg shadow-lg w-11/12">
+              <h3 className="text-xl font-semibold mb-4">
+                Get resources for projects📚
+              </h3>
               <p className="text-gray-700">
-                Sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam.
+                You can find free resources for your project and start building
+                your own project.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">Feature Three</h3>
+            <div className="bg-white p-6 rounded-lg shadow-lg w-11/12">
+              <h3 className="text-xl font-semibold mb-4">
+                Submit your project for others to review🧐
+              </h3>
               <p className="text-gray-700">
-                Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit.
+                You can submit your project and get a feedback from us and other
+                users.
               </p>
             </div>
           </div>
@@ -62,7 +68,7 @@ const Home = () => {
             Join us and start your journey with exciting opportunities and
             insights.
           </p>
-          <Link to="/get-started">
+          <Link to="/login">
             <button className="bg-yellow-500 text-gray-800 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-600">
               Get Started
             </button>

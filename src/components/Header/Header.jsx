@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -59,7 +59,7 @@ const Header = () => {
                 }border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-blue-400 hover:underline lg:p-0`
               }
             >
-              Designs
+              Images
             </NavLink>
           </li>
           <li>
@@ -77,12 +77,16 @@ const Header = () => {
         </ul>
       </nav>
       <div className="flex items-center space-x-4">
-        <button className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
-          Get Started
-        </button>
-        <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-          Log In
-        </button>
+        <Link to="/login">
+          <button className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
+            Get Started
+          </button>
+        </Link>
+        <Link to="/login">
+          <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+            Log In
+          </button>
+        </Link>
       </div>
     </header>
   );
