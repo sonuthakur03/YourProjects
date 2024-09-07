@@ -57,7 +57,9 @@ const Search = () => {
 // Fetch images based on the search term
 const imageLoader = async (searchTerm) => {
   const response = await fetch(
-    `https://api.unsplash.com/search/photos?page=1&query=${searchTerm}&client_id=${APIKEY}`
+    `https://api.unsplash.com/search/photos?page=1&query=${searchTerm}&client_id=${
+      import.meta.env.REACT_APP_SECRET_KEY
+    }`
   );
   const data = await response.json();
   console.log(data);
