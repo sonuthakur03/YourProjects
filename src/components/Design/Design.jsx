@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import APIKEY from "./imageFetch";
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
