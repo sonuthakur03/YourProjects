@@ -47,7 +47,7 @@ const Home = () => {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg w-11/12">
               <h3 className="text-xl font-semibold mb-4">
-                Submit your project for others to review🧐
+                Submit projects for others to review🧐
               </h3>
               <p className="text-gray-700">
                 You can submit your project and get a feedback from us and other

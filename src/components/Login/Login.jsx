@@ -7,9 +7,9 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Implement your login logic here
-    console.log("Email:", email);
-    console.log("Password:", password);
+    const loginData = new FormData(e.target);
+    const loginObj = Object.fromEntries(loginData.entries());
+    console.log(loginObj);
   };
 
   return (
@@ -32,6 +32,7 @@ const Login = () => {
             <input
               type="email"
               id="email"
+              name="email"
               placeholder="Enter your email"
               className="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
               value={email}
@@ -49,6 +50,7 @@ const Login = () => {
             <input
               type="password"
               id="password"
+              name="password"
               placeholder="Enter your password"
               className="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
               value={password}
@@ -61,9 +63,9 @@ const Login = () => {
               <input
                 type="checkbox"
                 id="remember-me"
+                name="remember-me"
                 value={remember}
                 onChange={(e) => setRemember(e.target.value)}
-                required
               />
               <label
                 htmlFor="remember-me"
