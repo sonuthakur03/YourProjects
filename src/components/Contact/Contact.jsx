@@ -1,13 +1,24 @@
 // Contact.jsx
-import React from "react";
+import React, { useState } from "react";
 import { FaLocationPin, FaEnvelope, FaPhone } from "react-icons/fa6";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleReset = () => {
+    setEmail("");
+    setName("");
+    setMessage("");
+  };
+
   const handleForm = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const obj = Object.fromEntries(formData.entries());
     console.log(obj);
+    handleReset();
   };
 
   return (
@@ -57,8 +68,10 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
+                    value={name}
                     placeholder="Your Name"
                     className="w-full px-4 py-2 border text-gray-700 rounded-lg"
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </div>
                 <div className="mb-4">
@@ -74,6 +87,8 @@ const Contact = () => {
                     name="email"
                     placeholder="Your Email"
                     className="w-full px-4 py-2 border text-gray-700 rounded-lg"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
                   />
                 </div>
                 <div className="mb-4">
@@ -89,6 +104,8 @@ const Contact = () => {
                     name="message"
                     placeholder="Your Message"
                     className="w-full px-4 py-2 border text-gray-700 rounded-lg"
+                    onChange={(e) => setMessage(e.target.value)}
+                    value={message}
                   />
                 </div>
                 <button

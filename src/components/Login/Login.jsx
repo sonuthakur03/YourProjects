@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import UserContext from "../../contexts/UserContext";
+import User from "../User/User";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [remember, setRemember] = useState("");
+  const [remember, setRemember] = useState(false);
+
+  const { setUser } = useContext(UserContext);
+
+  const handleReset = () => {
+    setEmail("");
+    setPassword("");
+    setRemember(false);
+  };
 
   const handleLogin = (e) => {
     e.preventDefault();
     const loginData = new FormData(e.target);
     const loginObj = Object.fromEntries(loginData.entries());
     console.log(loginObj);
+    setUser(loginData);
+    handleReset();
   };
 
   return (
@@ -85,6 +97,7 @@ const Login = () => {
           >
             Login
           </button>
+          <User />
         </form>
       </div>
     </div>
