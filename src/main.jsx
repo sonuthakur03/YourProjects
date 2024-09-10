@@ -14,12 +14,14 @@ import Contact from "./components/Contact/Contact.jsx";
 import Projects from "./components/Projects/Projects.jsx";
 import Design from "./components/Design/Design.jsx";
 import Login from "./components/Login/Login.jsx";
+import User from "./components/User/User.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="login" element={<Login />} />
+      <Route path="user" element={<User />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
       <Route path="projects" element={<Projects />} />

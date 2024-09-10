@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import UserContext from "../../contexts/UserContext";
-import User from "../User/User";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -8,6 +8,7 @@ const Login = () => {
   const [remember, setRemember] = useState(false);
 
   const { setUser } = useContext(UserContext);
+  const navigate = useNavigate();
 
   const handleReset = () => {
     setEmail("");
@@ -19,9 +20,16 @@ const Login = () => {
     e.preventDefault();
     const loginData = new FormData(e.target);
     const loginObj = Object.fromEntries(loginData.entries());
-    console.log(loginObj);
-    setUser(loginData);
+
+    const email = loginObj.email;
+    const password = loginObj.password;
+    const remember = loginObj["remember-me"] === "on";
+
+    setUser({ email, password, remember });
     handleReset();
+
+    // Navigate to user page after login
+    navigate("/user");
   };
 
   return (
@@ -76,8 +84,8 @@ const Login = () => {
                 type="checkbox"
                 id="remember-me"
                 name="remember-me"
-                value={remember}
-                onChange={(e) => setRemember(e.target.value)}
+                checked={remember}
+                onChange={(e) => setRemember(e.target.checked)}
               />
               <label
                 htmlFor="remember-me"
@@ -93,11 +101,10 @@ const Login = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="mt-1 w-full px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500"
           >
             Login
           </button>
-          <User />
         </form>
       </div>
     </div>
